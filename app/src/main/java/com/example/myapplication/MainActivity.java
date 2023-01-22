@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btn_quitter=findViewById(R.id.q);
         number=findViewById(R.id.insert);
 
+
         btn_quitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
                 System.exit(0);
             }
         });
-
         btn_reinitializer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
