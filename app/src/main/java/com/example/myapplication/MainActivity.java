@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btn_reinitializer,btn_quitter,btn_afficher;
+    View v ;
     EditText number;
     TextView tv;
 
@@ -25,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         btn_afficher=findViewById(R.id.a);
         number=findViewById(R.id.insert);
         tv=findViewById(R.id.textView);
+
+        Toast toast;
+        toast=Toast.makeText(MainActivity.this,"Veulliez saisir un entier!!",Toast.LENGTH_SHORT);
 
         btn_afficher.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }catch (NumberFormatException e){
+                    toast.show();
                     btn_reinitializer.callOnClick();
 
 
                 }
 
             }
-
         });
         btn_reinitializer.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("DefaultLocale")
