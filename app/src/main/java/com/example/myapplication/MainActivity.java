@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                     int Number = Integer.parseInt(number.getText().toString());
                     String s="";
                     for (int i=1;i<=10;i++) {
-                        int r= Number;
+                        int r= Number*i;
                         s+=String.format(" %d * %d= %d \n",Number,i,r);
                         r=0;
 
